@@ -3,17 +3,14 @@ public class StringPermutation {
         recursivePermute("", s);
     }
 
-    // Вспомогательный рекурсивный метод
     private static void recursivePermute(String prefix, String remaining) {
         if (remaining.length() == 0) {
-            System.out.println(prefix); // Когда букв не осталось, печатаем результат
+            System.out.println(prefix);
             return;
         }
 
         for (int i = 0; i < remaining.length(); i++) {
-            // Берем одну букву и переносим её в префикс
             String newPrefix = prefix + remaining.charAt(i);
-            // Оставшиеся буквы без той, которую взяли
             String newRemaining = remaining.substring(0, i) + remaining.substring(i + 1);
 
             recursivePermute(newPrefix, newRemaining);

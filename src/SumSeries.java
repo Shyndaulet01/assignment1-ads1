@@ -1,6 +1,6 @@
 public class SumSeries {
     public static double sum1(int i) {
-        if (i == 1) return 1.0; // Точка остановки
+        if (i == 1) return 1.0;
         return (1.0 / i) + sum1(i - 1); // Шаг рекурсии
     }
 
